@@ -43,7 +43,7 @@ public:
 
 This is one of the easier mediums on Leetcode, there's probably an optimization trick somewhere, or perhaps this is solvable with segment trees? At any rate, once you nail the bruteforce, further optimization is usually a fun challenge.
 
-Time complexity: O(Q), ?
+Time complexity: O(Q * N), in the absolute worst case we run each query for each number.
 
 Space complexity: O(1)
 
