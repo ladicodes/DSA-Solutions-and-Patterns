@@ -76,6 +76,7 @@ Which equates to:
 $$
 \sum_{i=1}^{k}L - 2K
 $$
+
 But since this will always be less than N, it's safe to say total TC is O(N).
 
 Space Complexity: O(N), from the hashmap.
