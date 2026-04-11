@@ -2,7 +2,6 @@
 
 Here I attempt to explain my solution to LC problem #3740.
 
-
 ## Solution Details
 
 - Language: C++
@@ -21,9 +20,9 @@ D = abs(nums[i] - nums[j]) + abs(nums[j] - nums[k]) + abs(nums[k] - nums[i])
 
 Where nums[i] = nums[j] = nums[k] and i != j != k.
 
-Okay, cool. One way to solve this would be to bruteforce, slap on three nested for loops and you're done. Certainly the constraints should allow this (N <= 100), but we're smart, we want something a little bit better than the naive cubic time solution.
+Okay, cool. One way to solve this would be to bruteforce, slap on three nested for loops and you're done. Certainly the constraints should allow this (N <= 100), but we're smart; we want something a little bit better than the naive cubic time solution.
 
-So, sacrificing a little memory instead, we can reduce the TC by an order of magnitude lower to quadratic time, by using a hashmap. 
+So, sacrificing a little memory instead, we can reduce the TC by an some order of magnitudes lower to linear time by using a hashmap. 
 
 Our plan would be to 'collect' the indices of each unique number in the array, then 'scan' through to compute the smallest 'distance' so far. Now, it's worth mentioning that arrays with size N < 3 are automatically disqualified, since no unique index triplets can exist here, saving some compute.
 
@@ -61,11 +60,11 @@ public:
 
 ## Conclusion
 
-This is a rather simple problem. The first instinct is to enumerate all possible combination of triplets, an approach that'd yield you no better than a time complexity in the order of O(N^3).
+This is a rather simple problem. The first instinct is to enumerate all possible combinations of triplets, an approach that'd yield you no better than a time complexity in the order of O(N^3).
 
-However, you should try to resist that temptation and look for better methods, like we saw here dropping one layer down to O(N^2). I'm unsure if it can be reduced further, but you're always welcome to try.
+However, you should try to resist that temptation and look for better methods, like we saw here dropping two layers down to O(N). 
 
-Time Complexity: O(N). Technically, the inner nested loop runs at most L-2 times, where L is the number of elements in the vector for that key. It's effectively sum of (L-2) across all K keys which is:
+Time Complexity: O(N). Technically, the inner nested loop runs at most L-2 times, where L is the number of elements in the vector for that key. It's effectively the sum of (L-2) across all K keys which is:
 
 $$
 \sum_{i=1}^{n}(L -2) = \sum_{i=1}^{k}L - \sum_{i=1}^{k}2\ 
