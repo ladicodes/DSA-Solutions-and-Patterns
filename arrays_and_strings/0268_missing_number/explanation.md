@@ -35,18 +35,3 @@ Instead of iterating with multiple loops to find the expected sum, we can use si
 ## Complexity
 - **Time:** O(n) - We do a single pass over the array to calculate `sum(nums)`. Calculating the expected sum takes O(1) time.
 - **Space:** O(1) - We only store a few integer variables, requiring constant extra memory regardless of the array's size.
-
-## Code
-```python
-from typing import List
-
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        # Step 1: n is exactly the length of the array
-        n = len(nums)
-        
-        # Step 2: Calculate expected sum using Gauss's formula
-        expected_sum = (n * (n + 1)) // 2
-        
-        # Step 3 & 4: The difference between expected and actual sum is the missing number
-        return expected_sum - sum(nums)
