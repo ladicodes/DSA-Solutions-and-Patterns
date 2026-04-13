@@ -38,4 +38,3 @@ class BestStudent:
 #call the function and print the result
 best_students = BestStudent.best_stud(students)
 print(best_students)
-
