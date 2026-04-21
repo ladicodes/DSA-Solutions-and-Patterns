@@ -15,7 +15,7 @@ out/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
-
+LeastRecentlyUsed
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -25,6 +25,6 @@ bin/
 
 ### VS Code ###
 .vscode/
-
+.idea
 ### Mac OS ###
 .DS_Store

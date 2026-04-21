@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LeastRecentlyUsed.iml" filepath="$PROJECT_DIR$/LeastRecentlyUsed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeastRecentlyUsed/LeastRecentlyUsed.iml" filepath="$PROJECT_DIR$/LeastRecentlyUsed/LeastRecentlyUsed.iml" />
     </modules>
   </component>
 </project>
